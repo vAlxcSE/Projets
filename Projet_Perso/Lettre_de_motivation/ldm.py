@@ -1,0 +1,10 @@
+from docx import Document
+
+doc = Document()
+
+
+
+nom_entreprise = input("Nom de la boite: ")
+nom_poste = input("Nom du poste: ")
+
+doc.add_paragraph ("Objet : " + nom_poste "Madame, Monsieur,\n\nActuellement étudiant en Bachelor Concepteur développeur d'Applications au sein de l’ETNA à Ivry-Sur-Seine, France, je suis à la recherche d'un poste en alternance afin de pouvoir valider mon cursus scolaire. Je suis vivement intéressé par cette opportunité et je souhaite mettre à profit mes compétences en Python, TypeScript, Node, Django, HTML et CSS.\n\nJe dispose d’une première expérience en informatique acquis durant ma piscine à l’ETNA, ainsi que le programme Code To Work de l’école qui consiste à développer des projets afin de pouvoir les présenter professionnellement. Cela m’a permis d’assimiler des bases en informatique, une connaissance des différents des langages et de me familiariser avec les technologies et des outils essentiels en informatique à connaitre. Toutes ces choses me motivent afin de vouloir continuer à vouloir acquérir de nouvelles compétences en informatique, apprendre de nouveaux langages, framework, découvrir de nouveaux outils et c’est pourquoi je pense que " + nom_entreprise " est parfaite pour une personne comme moi qui souhaite continuer à progresser professionnellement.\n\nAussi, malgré mon profil junior dans le domaine, je dispose d’une connaissance du monde du travail, d’une capacité à travailler aussi bien en autonomie qu'en équipe, notamment en raison de mes précédentes expériences en France et en Australie qui me permettront de m’adapter au sein de l’entreprise, d’une nouvelle équipe et de partager les valeurs d'excellence qui ont activement contribuer à votre succès. Mon objectif est d'apporter une réelle valeur ajoutée au sein de" + nom_entreprise ", en fournissant des solutions de qualité et en contribuant à votre croissance.\n\nJe vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.\n\nAUGUSTINE Alexandre")

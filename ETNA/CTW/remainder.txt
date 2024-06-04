@@ -1,0 +1,34 @@
+sudo apt-get install python3-django
+
+django-admin startproject BubbleMyTea
+python3 manage.py startapp polls
+
+sudo apt-get install mysql-client
+sudo apt-get install python3-dev default-libmysqlclient-dev build-essential pkg-config
+pip install mysqlclient --break-system-packages
+python3 manage.py inspectdb > models.py
+
+
+
+Creer environnement virtuel
+
+
+Activer environnement virtuel
+source venv/bin/activate
+
+pour update : methode put
+
+
+install django
+sudo apt install python3-django
+
+/Users/alexaugustine/Downloads/Coding/ETNA
+
+npm i bootsrap react-router-dom
+cd .\ETNA\CTW\CTW_Projet_Node_ExpressJS\FrontEnd\Ecom\src\
+
+cd ecom
+npm start
+
+
+Users, Orders, Products, organizations

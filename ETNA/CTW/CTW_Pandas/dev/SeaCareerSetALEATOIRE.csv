@@ -1,0 +1,21 @@
+passenger_id,name,sex,age,education,marital_status,relationship,class,fare,sibsp,parch,date_embarked,embarked,workclass,occupation,hours_per_week,capital_gain,capital_loss,native_country,income,survived
+239,"Pengelly, Mr. Frederick William",male,19.0,Some-college,Never-married,Other-relative,2,10.5,0,0,10/04/1912 13:50,S,Private,Adm-clerical,25.0,0.0,0.0,United-States,<=50K,0
+855,"Carter, Mrs. Ernest Courtenay (Lilian Hughes)",female,44.0,HS-grad,Married-civ-spouse,Wife,2,26.0,1,0,10/04/1912 13:50,S,Private,Adm-clerical,30.0,0.0,0.0,United-States,<=50K,0
+250,"Carter, Rev. Ernest Courtenay",male,54.0,Some-college,Widowed,Not-in-family,2,26.0,1,0,10/04/1912 12:40,S,Private,Prof-specialty,50.0,0.0,0.0,United-States,<=50K,0
+282,"Olsson, Mr. Nils Johan Goransson",male,28.0,Some-college,Never-married,Not-in-family,3,7.8542,0,0,10/04/1912 12:35,S,Private,Other-service,35.0,0.0,0.0,United-States,<=50K,0
+688,"Dakic, Mr. Branko",male,19.0,Some-college,Never-married,Own-child,3,10.1708,0,0,10/04/1912 13:50,S,Private,Adm-clerical,28.0,0.0,0.0,United-States,<=50K,0
+663,"Colley, Mr. Edward Pomeroy",male,47.0,HS-grad,Married-civ-spouse,Husband,1,25.5875,0,0,10/04/1912 13:35,S,Self-emp-inc,Exec-managerial,40.0,0.0,0.0,United-States,>50K,0
+71,"Jenkin, Mr. Stephen Curnow",male,32.0,Bachelors,Never-married,Not-in-family,2,10.5,0,0,10/04/1912 12:40,S,Private,Prof-specialty,40.0,0.0,0.0,United-States,>50K,0
+456,"Jalsevac, Mr. Ivan",male,29.0,HS-grad,Married-civ-spouse,Husband,3,7.8958,0,0,10/04/1912 18:50,C,Private,Transport-moving,55.0,0.0,0.0,United-States,<=50K,1
+581,"Christy, Miss. Julie Rachel",female,25.0,Bachelors,Never-married,Not-in-family,2,30.0,1,1,10/04/1912 13:55,S,Private,Exec-managerial,38.0,0.0,0.0,United-States,<=50K,1
+82,"Sheerlinck, Mr. Jan Baptist",male,29.0,Bachelors,Married-civ-spouse,Husband,3,9.5,0,0,10/04/1912 13:25,S,Private,Other-service,40.0,0.0,0.0,United-States,<=50K,1
+232,"Larsson, Mr. Bengt Edvin",male,29.0,Assoc-voc,Married-civ-spouse,Husband,3,7.775,0,0,10/04/1912 12:40,S,Private,Prof-specialty,40.0,0.0,0.0,United-States,<=50K,0
+886,"Rice, Mrs. William (Margaret Norton)",female,39.0,Some-college,Divorced,Unmarried,3,29.125,0,5,11/04/1912 11:40,Q,Private,Exec-managerial,56.0,0.0,0.0,United-States,<=50K,0
+874,"Vander Cruyssen, Mr. Victor",male,47.0,Assoc-voc,Never-married,Not-in-family,3,9.0,0,0,10/04/1912 13:25,S,Private,Other-service,40.0,0.0,0.0,United-States,<=50K,0
+444,"Reynaldo, Ms. Encarnacion",female,28.0,Bachelors,Never-married,Own-child,2,13.0,0,0,10/04/1912 12:40,S,Private,Exec-managerial,45.0,0.0,0.0,United-States,<=50K,1
+554,"Leeni, Mr. Fahim (""Philip Zenni"")",male,22.0,HS-grad,Never-married,Own-child,3,7.225,0,0,10/04/1912 18:50,C,Without-pay,Handlers-cleaners,40.0,4416.0,0.0,United-States,<=50K,1
+884,"Banfield, Mr. Frederick James",male,28.0,12th,Never-married,Not-in-family,2,10.5,0,0,10/04/1912 12:50,S,Private,Transport-moving,50.0,0.0,0.0,United-States,<=50K,0
+573,"Flynn, Mr. John Irwin (""Irving"")",male,36.0,12th,Married-civ-spouse,Husband,1,26.3875,0,0,10/04/1912 12:55,S,Private,Craft-repair,40.0,0.0,0.0,United-States,<=50K,1
+589,"Gilinski, Mr. Eliezer",male,22.0,Some-college,Never-married,Not-in-family,3,8.05,0,0,10/04/1912 12:40,S,State-gov,Adm-clerical,20.0,0.0,0.0,United-States,<=50K,0
+888,"Graham, Miss. Margaret Edith",female,19.0,HS-grad,Never-married,Own-child,1,30.0,0,0,10/04/1912 13:35,S,Local-gov,Adm-clerical,40.0,0.0,0.0,United-States,<=50K,1
+890,"Behr, Mr. Karl Howell",male,26.0,HS-grad,Never-married,Own-child,1,30.0,0,0,10/04/1912 19:40,C,Private,Handlers-cleaners,40.0,0.0,0.0,United-States,<=50K,1
