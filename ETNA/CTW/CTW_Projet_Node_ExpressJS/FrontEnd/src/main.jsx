@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Dashboard from '../Components/Dashboard'
-import Login from '../Components/Login'
-import Register from '../Components/Register'
+import Dashboard from './components/Dashboard'
+import Login from './components/Login'
+import Register from './components/Register'
+import { Menu , Example , classNames } from './components/Menu'
 import './index.css'
 
 // Import React react dom 
@@ -20,10 +21,10 @@ const router = createBrowserRouter([
     path: '/register',
     element: <Register/>
   },
-  // {
-  //   path: '/accueil',
-  //   element: <Accueil/>
-  // },
+  {
+    path: '/menu',
+    element: <Menu/>
+  },
   {
     path: '/dashboard',
     element: <Dashboard/>

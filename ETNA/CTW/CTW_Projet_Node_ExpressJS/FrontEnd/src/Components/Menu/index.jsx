@@ -15,10 +15,10 @@ import {
   TabPanels,
   Transition,
   TransitionChild,
-} from '@headlessui/react'
+} from "@headlessui/react"
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const navigation = {
+const Menu = () => {
   categories: [
     {
       id: 'women',
@@ -134,18 +134,18 @@ const navigation = {
         },
       ],
     },
-  ],
+  ];
   pages: [
     { name: 'Company', href: '#' },
     { name: 'Stores', href: '#' },
-  ],
+  ]
 }
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+function Example() {
   const [open, setOpen] = useState(false)
 
   return (
@@ -468,3 +468,5 @@ export default function Example() {
     </div>
   )
 }
+
+export { Menu , Example , classNames };
