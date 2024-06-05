@@ -26,8 +26,8 @@ function Login () {
           <img src={img} className='w-full h-full object-cover'/>   
         </div>
 
-        <div className='w-1/2 h-full bg-[#f5f5f5] flex flex-col p-20 justify-between items-center'>
-          <img src={logo} className='w-full h-full object-cover'/> 
+        <div className='w-1/2 h-full bg-[#f5f5f5] flex flex-col p-20 items-center'>
+          <img src={logo} className='w-full max-h-[500px] object-cover'/> 
           {/* <h1 className='text-x1 text-[#060606] font-semibold'>LOGO</h1> */}
           
           
