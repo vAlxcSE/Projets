@@ -27,7 +27,7 @@ function Login () {
         </div>
 
         <div className='w-1/2 h-full bg-[#f5f5f5] flex flex-col p-20 items-center'>
-          <img src={logo} className='w-full h-[311.42px] object-cover'/> 
+          <img src={logo} className='w-[35%] h-[35%] object-cover'/> 
           {/* <h1 className='text-x1 text-[#060606] font-semibold'>LOGO</h1> */}
           
           
