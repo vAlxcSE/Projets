@@ -1,6 +1,4 @@
 import React from 'react'
-import './Menu.css'
-import '../../App.css'
 
 import { Fragment, useState } from 'react'
 import {
