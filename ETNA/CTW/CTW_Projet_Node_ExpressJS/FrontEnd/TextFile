@@ -3,3 +3,7 @@ git config --global user.email "alex_yh@outlook.fr"
 
 
 npm install
+
+https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications
+https://stackoverflow.com/questions/63141448/safari-fetch-api-cannot-load-due-to-access-control-checks-after-reload
+[Error] Fetch API cannot load http://localhost:8080/login due to access control checks.
