@@ -1,7 +1,7 @@
-const mysql = require("mysql")
 const express = require("express");
 const port = process.env.PORT || 8000
 const jwt = require('jsonwebtoken')
+const mysql = require('mysql');
 
 const app = express();
 
@@ -11,12 +11,11 @@ const app = express();
 app.get('/', (req, res) => {
     const connection = mysql.createConnection({
         host: 'localhost',
-        user: 'root',
-        password: 'root',
-        database: 'Api_node',
-        socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
-    })
-    
+        user: 'myuser',
+        password: 'mypassword',
+        database: 'ECOM',
+    });
+
     connection.connect((err) => {
         if (err){
             console.error("Erreur de connexion : "+err.stack)
@@ -31,23 +30,6 @@ app.get('/', (req, res) => {
     }) 
 })
 
-// app.get('/jwt', (req, res) => {
-//     const createTokenFromJson = (jsonData, secretkey, option = {}) => {
-//         try {
-//             const token = jwt.sign(jsonData, secretkey, option)
-//             return token
-//         } catch(error) {
-//             console.log("Error : ", error.message)
-//             return null
-//         }
-
-//     const jsonData = { email :"", password :""}
-//     const token = createTokenFromJson(jsonData)
-
-//     res.json({ token : true })
-// })
-
-
 app.listen(port, () => {
    console.log("Serveur en ligne");
-})
+});
