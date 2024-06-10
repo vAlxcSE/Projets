@@ -5,51 +5,71 @@ import GOOGLE_ICON from '../loginAssets/Google.png'
 import { useRef, useState, useEffect } from 'react';
 import Axios from "axios"
 
-const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9_]{3,23}$/;
-const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%*?&]).{8,24}$/;
+// const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9_]{3,23}$/;
+// const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%*?&]).{8,24}$/;
 
-const Register = () => {
-  const userRef =useRef();
-  const errRef =useRef();
+// const [firstname, setFirstname] = useState('');
+// const [lastname, setLastname] = useState('');
+// const [email, setEmail] = useState('');
+// const [password, setPassword] = useState('');
+// const [registerStatus, setRegisterStatus] = useState('');
 
-  const [user, setUser] = useState('');
-  const [validName, setValidName] = useState(false);
-  const [userFocus, setUserFocus] = useState(false);
+// const Register = (e) => {
+//   e.preventDefault();
+//   Axios.post('http://localhost:3000/register', {
+//     email: email,
+//     password: password,
+//     firstname: firstname,
+//     lastname: lastname,
+//   }).then((response) => {
+//     if (response.data.message){
+//       setRegisterStatus(response.data.message); 
+//     }else{
+//       setRegisterStatus("Votre compte a bien été créer");
+//     }
+//   })
 
-  const [pwd, setPwd] = useState('');
-  const [validPwd, setValidPwd] = useState(false);
-  const [pwdFocus, setPwdFocus] = useState(false);
+  // const userRef =useRef();
+  // const errRef =useRef();
 
-  const [matchpwd, setMatchPwd] = useState('');
-  const [validMatch, setValidMatch] = useState(false);
-  const [matchFocus, setMatchUser] = useState(false);
+  // const [user, setUser] = useState('');
+  // const [validName, setValidName] = useState(false);
+  // const [userFocus, setUserFocus] = useState(false);
 
-  const [errMsg, setErrMsg] = useState('');
-  const [success, setSuccess] = useState(false);
+  // const [pwd, setPwd] = useState('');
+  // const [validPwd, setValidPwd] = useState(false);
+  // const [pwdFocus, setPwdFocus] = useState(false);
+
+  // const [matchpwd, setMatchPwd] = useState('');
+  // const [validMatch, setValidMatch] = useState(false);
+  // const [matchFocus, setMatchUser] = useState(false);
+
+  // const [errMsg, setErrMsg] = useState('');
+  // const [success, setSuccess] = useState(false);
 
   // useEffect (() => {
   //   userRef.current.focus ();
   // }, [])
 
-  useEffect (() => {
-    const result =USER_REGEX.test(user);
-    console.log(result);
-    console.log(user);
-    setValidName(result);
-  }, [user])
+  // useEffect (() => {
+  //   const result =USER_REGEX.test(user);
+  //   console.log(result);
+  //   console.log(user);
+  //   setValidName(result);
+  // }, [user])
 
-  useEffect (() => {
-    const result =USER_REGEX.test(pwd);
-    console.log(result);
-    console.log(pwd);
-    setValidPwd(result);
-    const match = pwd === matchpwd;
-    setValidPwd(match);
-  }, [pwd, matchpwd])
+  // useEffect (() => {
+  //   const result =USER_REGEX.test(pwd);
+  //   console.log(result);
+  //   console.log(pwd);
+  //   setValidPwd(result);
+  //   const match = pwd === matchpwd;
+  //   setValidPwd(match);
+  // }, [pwd, matchpwd])
 
-  useEffect (() => {
-    setErrMsg ('');
-  }, [user, pwd, matchpwd])
+  // useEffect (() => {
+  //   setErrMsg ('');
+  // }, [user, pwd, matchpwd])
   
   function handleSubmit(event) {
     event.preventDefault();
@@ -75,28 +95,44 @@ const Register = () => {
           <h3 className='text-3xl font-semibold mb-2'>S'enregistrer</h3>
           <p className='text-base mb-4'>Bienvenue parmi nous !</p> 
         </div>  
-      <form onSubmit={handleSubmit}>
+      <form>
         <div className='w-full flex flex-col mb-4'>
+
+
+        <input 
+            type='firstname' 
+            placeholder='Prénom'
+            onChange={(e) =>{setFirstname(e.target.value)}}  
+            className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none' required />
+
+
+          <input 
+            type='lastname' 
+            placeholder='Nom'
+            onChange={(e) =>{setLastname(e.target.value)}}  
+            className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none' required />
 
           <input 
             type='email' 
-            placeholder='Email'  
-            className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'/>
+            placeholder='Email'
+            onChange={(e) =>{setEmail(e.target.value)}}  
+            className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none' required />
 
           <input
             type='password' 
-            placeholder='Mot de passe'  
-            className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'/>
+            placeholder='Mot de passe'
+            onChange={(e) =>{setPassword(e.target.value)}}    
+            className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none' required />
 
-          <input
+          {/* <input
             type='comfirmPassword' 
             placeholder='Confirmer le mot de passe'  
-            className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'/>  
+            className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'/>   */}
         
         </div>
 
         <div className='w-full flex flex-col mb-4'>
-          <button className='w-full text-[#060606] my-4 font-semibold bg-white border-2 border-black rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
+          <button onClick={register} className='w-full text-[#060606] my-4 font-semibold bg-white border-2 border-black rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
             S'enregistrer
           </button>
           <div className='w-full flex items-center justify-center'>
@@ -119,7 +155,7 @@ const Register = () => {
     </div>
     </div> 
   </section>   
-);
+)
 }
 
 export default Register;
