@@ -1,11 +1,18 @@
 const express = require('express')
+const cors = require('cors');
 const router = express.Router()
 
 router.get('/',(req, res) => {
     res.status(200).json({msg:"Tous les users"})
 })
 
-// router.post('/',)
+app.use(cors());
+
+app.use('/login', (req, res) => {
+    res.send({
+      token: 'test123'
+    });
+  });
 
 router.get('/:id',(req, res) => {
     const id =req.params.id
@@ -24,3 +31,5 @@ router.get('/:id/:status',(req, res) => {
 })
 
 module.exports = router;
+
+app.listen(8080, () => console.log('API is running on http://localhost:8080/login'));

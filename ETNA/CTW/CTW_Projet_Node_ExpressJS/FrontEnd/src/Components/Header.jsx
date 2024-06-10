@@ -6,6 +6,7 @@ import {
   Transition, TransitionChild,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Outlet } from 'react-router-dom'
 
 const navigation = {
     categories: [
@@ -446,7 +447,8 @@ export default function Header () {
               </div>
             </div>
           </nav>
-        </header>
+        </header> 
+        <Outlet/>
       </div>
     // </Modal>
     )

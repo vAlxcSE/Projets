@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter , Routes , Route } from 'react-router-dom'
+import { BrowserRouter as Router , Routes , Route, Navigate } from 'react-router-dom';
 import Home from "./pages/Home";
 import Panier from "./pages/Panier";
 import Login from "./pages/Login";
@@ -9,6 +9,7 @@ import Profil from "./pages/Profil";
 import NoPage from "./pages/NoPages"
 import Products from './pages/Products';
 import { useState } from "react";
+import Header from './components/Header';
 
 
 
@@ -16,11 +17,11 @@ export default function App() {
   return (
    
       <div>
-        <BrowserRouter>
+        <Router>
           <Routes>
-
-              <Route index element={<Home/>}/>
-              <Route path="/" element={<Home/>}/>
+              <Route path="/" element={<Header/>}>
+              <Route index element={<Navigate to="/home"/>}/>
+              <Route path="/home" element={<Home/>}/>
               <Route path="/login" element={<Login/>}/>
               <Route path="/register" element={<Register/>}/>
               <Route path="/dashboard" element={<Dashboard/>}/>
@@ -28,9 +29,9 @@ export default function App() {
               <Route path="/profil" element={<Profil/>}/>
               <Route path="/products" element={<Products/>}/>
               <Route path="*" element={<NoPage/>}/>
-
+              </Route>
           </Routes>
-        </BrowserRouter>
+        </Router>
       </div>
   );
 }  
