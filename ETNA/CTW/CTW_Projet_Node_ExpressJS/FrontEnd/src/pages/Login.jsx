@@ -4,14 +4,24 @@ import img from '../loginAssets/IMGLogin.jpg';
 import logo from '../loginAssets/shoes-logo.png';
 import GOOGLE_ICON from '../loginAssets/Google.png';
 
-
+const [email, setEmail] = useState('');
+const [password, setPassword] = useState('');
+const [loginStatus, setLoginStatus] = useState('');
 
 export default function Login () {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(e);
+  const Login = (e) => {e.preventDefault();
+    Axios.post('http://localhost:3000/login', {
+      email: email,
+      password: password,
+    }).then((response) => {
+      if (response.data.message){
+        setRegisterStatus(response.data.message); 
+      }else{
+        setRegisterStatus(response.data[0].email);
       }
+    })
+  }
 
   return (
     <div className='w-full h-screen flex flex-col md:flex-row'>
@@ -30,15 +40,19 @@ export default function Login () {
           </div>  
         <form onSubmit={handleSubmit}>
           <div className='w-full flex flex-col mb-4'>
-            <input 
-              type='email' 
-              placeholder='Email'  
-              className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'/>
 
+          <input 
+            type='email' 
+            placeholder='Email'
+            onChange={(e) =>{setEmail(e.target.value)}}  
+            className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none' required />
+            
             <input
-              type='password' 
-              placeholder='Mot de passe'  
-              className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'/>
+            type='password' 
+            placeholder='Mot de passe'
+            onChange={(e) =>{setPassword(e.target.value)}}    
+            className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none' required />
+
           </div>
 
           <div className='w-full flex items-center justify-between mb-4'>
@@ -50,7 +64,7 @@ export default function Login () {
           </div>
 
           <div className='w-full flex flex-col mb-4'>
-            <button className='w-full text-white my-4 font-semibold bg-[#060606] rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
+            <button onClick={login} className='w-full text-white my-4 font-semibold bg-[#060606] rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
               Se connecter
             </button>
             <div className='w-full flex items-center justify-center'>
