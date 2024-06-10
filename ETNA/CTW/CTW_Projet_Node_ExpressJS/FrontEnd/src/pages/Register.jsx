@@ -3,6 +3,7 @@ import img from '../loginAssets/IMGLogin.jpg'
 import logo from '../loginAssets/shoes-logo.png'
 import GOOGLE_ICON from '../loginAssets/Google.png'
 import { useRef, useState, useEffect } from 'react';
+import Axios from "axios"
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%*?&]).{8,24}$/;

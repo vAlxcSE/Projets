@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import img from '../loginAssets/IMGLogin.jpg';
 import logo from '../loginAssets/shoes-logo.png';
 import GOOGLE_ICON from '../loginAssets/Google.png';
+import Axios from "axios"
 
 
 
@@ -29,16 +30,10 @@ export default function Login () {
             <p className='text-base mb-4'>Bon retour ! Veuillez entrer vos identifiants.</p> 
           </div>  
         <form onSubmit={handleSubmit}>
+          
           <div className='w-full flex flex-col mb-4'>
-            <input 
-              type='email' 
-              placeholder='Email'  
-              className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'/>
-
-            <input
-              type='password' 
-              placeholder='Mot de passe'  
-              className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'/>
+            <input type='email' placeholder='Email' className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'/>
+            <input type='password' className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'/>
           </div>
 
           <div className='w-full flex items-center justify-between mb-4'>

@@ -1,12 +1,6 @@
 import { Fragment, useState , state } from 'react'
-import {
-  Dialog, DialogPanel, Popover,
-  PopoverButton, PopoverGroup, PopoverPanel,
-  Tab, TabGroup, TabList, TabPanel, TabPanels,
-  Transition, TransitionChild,
-} from '@headlessui/react'
+import { Dialog, DialogPanel, Popover, PopoverButton, PopoverGroup, PopoverPanel, Tab, TabGroup, TabList, TabPanel, TabPanels, Transition, TransitionChild } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Outlet } from 'react-router-dom'
 
 const navigation = {
     categories: [
@@ -145,13 +139,6 @@ export default function Header () {
 
       return (
 
-      //   <Modal 
-      //   open={this.state.open}
-      //   onClose={this.onCloseModal}
-      //   onExited={this.onExited}
-      //   top
-      // >
-        
         <div className="bg-white">
         {/* Mobile menu */}
         <Transition show={open}>
@@ -448,8 +435,7 @@ export default function Header () {
             </div>
           </nav>
         </header> 
-        <Outlet/>
+        <Outlet />
       </div>
-    // </Modal>
     )
     }
