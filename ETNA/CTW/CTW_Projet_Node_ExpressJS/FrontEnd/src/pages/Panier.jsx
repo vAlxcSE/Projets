@@ -1,9 +1,8 @@
-import Header from "../components/Header";
+import Header from "../components/Navbar";
 
 export default function Panier () {
     return (
         <>
-            <Header/>
             <h1>Panier</h1>
         </>
     )
